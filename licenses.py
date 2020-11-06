@@ -3,7 +3,7 @@
 
 import json
 import argparse
-import os.path
+import os
 import sys
 
 def print_line(name, license):
@@ -39,7 +39,7 @@ def main():
     args = parser.parse_args()
 
     # Get the path to the project, default is current directory
-    current_dir = os.path.dirname(os.path.realpath(__file__))
+    current_dir = os.getcwd()
     if args.path:
         path = os.path.join(current_dir, args.path)
     else:
